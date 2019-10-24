@@ -1,3 +1,4 @@
 module.exports = {
-  mongoConnectionString: "mongodb://localhost:27017/gamer-profile"
+  mongoConnectionString:
+    "mongodb+srv://NguyenHien288:12345@cluster0-ah5u6.mongodb.net/GamerWeb?retryWrites=true&w=majority"
 };

@@ -6,6 +6,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const config = require("./config");
 const authRouter = require("./Server/api/module/auth/auth.router");
+const teamRouter = require("./Server/api/module/teams/team.router");
 
 mongoose.connect(config.mongoConnectionString);
 const PORT = 3000;
@@ -17,6 +18,7 @@ app.use("/", express.static("../client"));
 app.use("/api/player", playerRouter);
 app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/team", teamRouter);
 
 app.listen(PORT, function() {
   console.log(`Server listening in ${PORT}`);

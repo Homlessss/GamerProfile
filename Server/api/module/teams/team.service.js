@@ -1,4 +1,4 @@
-const repository = require("./player.repository");
+const repository = require("./team.repository");
 const authService = require("../auth/auth.service");
 
 const find = async function(user, query) {
@@ -22,8 +22,8 @@ const findById = async function(user, id) {
 const create = async function(user, data) {
   let auth = authService.authorization(user, ["admin"]);
   if (auth) {
-    if (!data.name || !data.team) {
-      throw new Error("Missing input");
+    if (!data.name && !data.nation) {
+      throw new Error("Missing input!");
     } else {
       return await repository.create(data);
     }
@@ -33,11 +33,11 @@ const create = async function(user, data) {
 };
 
 const update = async function(user, id, data) {
-  const existedData = await repository.findById(id);
   let auth = authService.authorization(user, ["admin"]);
+  const existedData = repository.findById(id);
   if (auth) {
     if (!existedData) {
-      throw new Error("Not found");
+      throw new Error("Not found!");
     } else {
       return await repository.update(id, data);
     }
@@ -45,12 +45,13 @@ const update = async function(user, id, data) {
     throw new Error("Unauthorized!");
   }
 };
+
 const deleteOne = async function(user, id) {
-  const existedData = await repository.findById(id);
   let auth = authService.authorization(user, ["admin"]);
+  const existedData = repository.findById(id);
   if (auth) {
     if (!existedData) {
-      throw new Error("Not found");
+      throw new Error("Not found!");
     } else {
       return await repository.delete(id);
     }

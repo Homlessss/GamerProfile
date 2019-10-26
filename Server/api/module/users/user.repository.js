@@ -2,8 +2,7 @@ const mongoose = require("mongoose");
 
 const UserSchema = mongoose.Schema({
   name: {
-    type: String,
-    require: true
+    type: String
   },
   email: {
     type: String,
@@ -13,7 +12,10 @@ const UserSchema = mongoose.Schema({
     type: String,
     require: true
   },
-  phone: String,
+  phone: {
+    type: String,
+    require: true
+  },
   role: {
     type: String,
     default: "user"
@@ -43,9 +45,14 @@ const deleteOne = async function(id) {
   return await UserModel.findByIdAndDelete(id);
 };
 
+const findByEmail = async function(email) {
+  return await UserModel.findOne({ email: email });
+};
+
 module.exports = {
   find,
   findById,
+  findByEmail,
   create,
   update,
   delete: deleteOne

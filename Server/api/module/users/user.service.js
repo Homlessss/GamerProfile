@@ -9,7 +9,7 @@ const findById = async function(id) {
 };
 
 const create = async function(data) {
-  if (!data.name || !data.email) {
+  if (!data.password || !data.email) {
     throw new error("Missing input");
   }
   if (!validateEmail(data.email)) {

@@ -10,7 +10,7 @@ class Login extends Component {
             <input
               type="email"
               className="form-control"
-              id="exampleInputEmail1"
+              id="email"
               aria-describedby="emailHelp"
               placeholder="Enter email"
             />
@@ -23,7 +23,7 @@ class Login extends Component {
             <input
               type="password"
               className="form-control"
-              id="exampleInputPassword1"
+              id="password"
               placeholder="Password"
             />
           </div>
@@ -37,7 +37,7 @@ class Login extends Component {
               Check me out
             </label> */}
           </div>
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" onClick="login();" className="btn btn-primary">
             Submit
           </button>
         </form>

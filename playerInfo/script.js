@@ -18,6 +18,7 @@ $(document).ready(function() {
           
         </div>
     </div>`);
+<<<<<<< HEAD
     $("#search").submit(function(event) {
       event.preventDefault();
       $("#player-list").html("");
@@ -32,6 +33,20 @@ $(document).ready(function() {
                 console.log(data.data[0].name);
               }
               $("#player-list").append(`
+=======
+        $("#search").submit(function(event){
+            event.preventDefault();
+            $("#player-list").html("");
+            let inputVal = $("#keyword").val();
+            $.ajax(`http://localhost:3000/api/player?name=${inputVal}`, {
+                type: "GET",
+                success: function (data) {
+                    if (data && data.data) {
+                        for (let i=0; i<data.data.length;i++){
+                            if (data.data.player[i].name===inputVal){
+                                console.log(data);
+                                $("#player-list").append(`
+>>>>>>> 7a339452192996ef0d063b4b6d707b7e511bd6d3
                             <div class="col-12 mt-3 mb-3">
                                 <div class="row">
                                     <div class="col-3">
@@ -56,6 +71,7 @@ $(document).ready(function() {
                                 </div>
                             </div>
                         `);
+<<<<<<< HEAD
             }
           }
         },
@@ -63,6 +79,19 @@ $(document).ready(function() {
           console.log(err);
         }
       });
+=======
+                            }
+                        }
+                        
+                        
+                    }
+                },
+                error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+>>>>>>> 7a339452192996ef0d063b4b6d707b7e511bd6d3
     });
   });
 });

@@ -30,10 +30,7 @@ $(document).ready(function () {
                         for (let i=0; i<data.data.length;i++){
                             if (data.data.player[i].name===inputVal){
                                 console.log(data);
-                            }
-                        }
-                        
-                        $("#player-list").append(`
+                                $("#player-list").append(`
                             <div class="col-12 mt-3 mb-3">
                                 <div class="row">
                                     <div class="col-3">
@@ -58,6 +55,10 @@ $(document).ready(function () {
                                 </div>
                             </div>
                         `);
+                            }
+                        }
+                        
+                        
                     }
                 },
                 error: function (err) {

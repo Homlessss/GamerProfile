@@ -22,15 +22,11 @@ $(document).ready(function(){
               const appendedElement = `
                 <div class="col-12 video-container">
                   <div class="row">
-                    <div class="col-6 col-md-3">
-                      <a href="${YOUTUBE_VIDEO_URL}${item && item.id && item.id.videoId}">
-                        <img class="video-thumbnail" src="${item.snippet && item.snippet.thumbnails && item.snippet.thumbnails.high && item.snippet.thumbnails.high.url}">
-                      </a>
+                    <div class="embed-responsive embed-responsive-16by9 col-6 col-md-6">
+                      <iframe src="https://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <div class="col-6 col-md-9">
-                      <a href="${YOUTUBE_VIDEO_URL}${item && item.id && item.id.videoId}">
-                        <h3 class="video-title">${item.snippet && item.snippet.title}</h3>
-                      </a>
+                    <div class="col-6 col-md-12">
+                        <h2 class="video-title">${item.snippet && item.snippet.title}</h2>
                       <p class="video-description">${item.snippet && item.snippet.description}</p>
                     </div>
                   <div>

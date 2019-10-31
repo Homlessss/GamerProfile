@@ -2,21 +2,11 @@ const repository = require("./player.repository");
 const authService = require("../auth/auth.service");
 
 const find = async function(user, query) {
-  let auth = authService.authorization(user, ["admin", "user"]);
-  if (auth) {
-    return await repository.find(query);
-  } else {
-    throw new Error("Unauthorized!");
-  }
+  return await repository.find(query);
 };
 
 const findById = async function(user, id) {
-  let auth = authService.authorization(user, ["admin", "user"]);
-  if (auth) {
-    return await repository.findById(id);
-  } else {
-    throw new Error("Unauthorized!");
-  }
+  return await repository.findById(id);
 };
 
 const create = async function(user, data) {

@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const authService = require("../auth/auth.service");
 
-router.get("/", authService.authentication, async function(req, res) {
+router.get("/", async function(req, res) {
   try {
     const data = await service.find(req.user, req.query);
     res.status(200).send({ data: data });
@@ -14,7 +14,7 @@ router.get("/", authService.authentication, async function(req, res) {
   }
 });
 
-router.get("/:id", authService.authentication, async function(req, res) {
+router.get("/:id", async function(req, res) {
   try {
     const data = await service.findById(req.user, req.params.id);
     res.status(200).send({

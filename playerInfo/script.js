@@ -1,9 +1,8 @@
-
-$(document).ready(function () {
-    $(".player-info").click(function(event){
-        event.preventDefault();
-        $(".main-body").html("");
-        $(".main-body").append(`<div class="row">
+$(document).ready(function() {
+  $(".player-info").click(function(event) {
+    event.preventDefault();
+    $(".main-body").html("");
+    $(".main-body").append(`<div class="row">
         <div class="col-md-12 text-center">
             <form id="search">
                 <div class="form-group">
@@ -19,21 +18,20 @@ $(document).ready(function () {
           
         </div>
     </div>`);
-        $("#search").submit(function(event){
-            event.preventDefault();
-            $("#player-list").html("");
-            let inputVal = $("#keyword").val();
-            $.ajax(`http://localhost:3000/api/player?name=${inputVal}`, {
-                type: "GET",
-                success: function (data) {
-                    if (data && data.data) {
-                        for (let i=0; i<data.data.length;i++){
-                            if (data.data.player[i].name===inputVal){
-                                console.log(data);
-                            }
-                        }
-                        
-                        $("#player-list").append(`
+    $("#search").submit(function(event) {
+      event.preventDefault();
+      $("#player-list").html("");
+      let inputVal = $("#keyword").val();
+      $.ajax({
+        type: "GET",
+        url: `http://localhost:3000/api/player?name=${inputVal}`,
+        success: function(data) {
+          if (data && data.data) {
+            for (var i = 0; i < data.data.length; i++) {
+              if (data.data[i].name === inputVal) { 
+                console.log(data.data[0].name);
+              }
+              $("#player-list").append(`
                             <div class="col-12 mt-3 mb-3">
                                 <div class="row">
                                     <div class="col-3">
@@ -58,12 +56,13 @@ $(document).ready(function () {
                                 </div>
                             </div>
                         `);
-                    }
-                },
-                error: function (err) {
-                        console.log(err);
-                    }
-                })
-            });
+            }
+          }
+        },
+        error: function(err) {
+          console.log(err);
+        }
+      });
     });
+  });
 });

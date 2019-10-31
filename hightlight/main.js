@@ -3,8 +3,8 @@ const YOUTUBE_VIDEO_URL = 'https://www.youtube.com/watch?v=';
 const keyword = 'Hightlight lol'  
 
 $(document).ready(function(){
-  $('.hight-light').click(function(e) {
-    e.preventDefault();
+  // $('.hight-light').click(function(e) {
+  //   e.preventDefault();
     $('.main-body').html("");
     $('.main-body').append(`
       <div class='loading-indicator'>
@@ -44,5 +44,5 @@ $(document).ready(function(){
           console.log(err);
         }
       })
-  })
+  // })
 })

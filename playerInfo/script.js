@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $(".player-info").click(function(event){
-        event.preventDefault();
+    // $(".player-info").click(function(event){
+    //     event.preventDefault();
         $(".main-body").html("");
         $(".main-body").append(`
             <div class="row">
@@ -69,6 +69,6 @@ $(document).ready(function () {
                 })
             });
     
-    });
+    // });
   
 });

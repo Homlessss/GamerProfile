@@ -47,7 +47,7 @@ router.put("/:id", auth.authentication, async function(req, res) {
   }
 });
 
-router.delete("/:id", auth.authentication, async function(req, res) {
+router.delete("/:id",  async function(req, res) {
   try {
     const data = await service.delete(req.user, req.params.id);
     res.status(200).send({ data: data });

@@ -47,16 +47,17 @@ const update = async function(user, id, data) {
 };
 
 const deleteOne = async function(user, id) {
-  let auth = authService.authorization(user, ["admin"]);
+  // let auth = authService.authorization(user, ["admin"]);
   const existedData = repository.findById(id);
-  if (auth) {
-    if (!existedData) {
-      throw new Error("Not found!");
-    } else {
-      return await repository.delete(id);
-    }
+  // if (auth) {
+    
+  // } else {
+  //   throw new Error("Unauthorized!");
+  // }
+  if (!existedData) {
+    throw new Error("Not found!");
   } else {
-    throw new Error("Unauthorized!");
+    return await repository.delete(id);
   }
 };
 

@@ -13,10 +13,13 @@ const PlayerSchema = mongoose.Schema({
     require: true
   },
   hightlight: {
-    url_video: String
+    type: String
   },
   image: {
-    url_image: String
+    type: String
+  },
+  lane: {
+    type: String
   }
 });
 
@@ -27,6 +30,9 @@ const find = async function(query) {
 };
 const findById = async function(id) {
   return await PlayerModel.findById(id);
+};
+const findByName = async function(name) {
+  return await PlayerModel.findOne({ name: name });
 };
 const create = async function(data) {
   const newDoc = new PlayerModel(data);
@@ -39,10 +45,12 @@ const deleteOne = async function(id) {
   return await PlayerModel.findByIdAndDelete(id);
 };
 
+
 module.exports = {
   find,
+  findByName: findByName,
   findById,
   create,
   update,
-  delete: deleteOne
+  delete: deleteOne,
 };

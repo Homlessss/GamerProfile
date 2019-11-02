@@ -22,6 +22,10 @@ $(document).ready(function() {
       event.preventDefault();
       $("#player-list").html("");
       let inputVal = $("#keyword").val();
+      str1 = inputVal.slice(0, 1);
+      str2 = inputVal.slice(1);
+      inputVal = str1.toUpperCase() + str2.toLowerCase();
+      console.log(inputVal);
       $.ajax({
         type: "GET",
         url: `http://localhost:3000/api/player?name=${inputVal}`,
@@ -29,7 +33,6 @@ $(document).ready(function() {
           if (data && data.data) {
             for (var i = 0; i < data.data.length; i++) {
               if (data.data[i].name === inputVal) {
-                console.log(data.data[0].name);
               }
               $("#player-list").append(`
                             <div class="col-12 mt-3 mb-3">

@@ -1,25 +1,7 @@
 $(document).ready(function() {
   // $(".player-info").click(function(event){
   //     event.preventDefault();
-  $(".main-body").html("");
-  $(".main-body").append(`
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <h2 class="title">Find a Pro Player</h2>
-                    <form id="search" method="POST">
-                        <div class="form-group">
-                            <input type="text" name="name" id="keyword" class="form-control" placeholder="Search..." required>
-                            <br>
-                            <input type="submit" class="btn btn-primary form-control" value="Submit"/>
-                        </div>
-                    </form>
-                </div>
-            </div>
-    <div class="row">
-        <div class="col-md-12" id="player-list">
-          
-        </div>
-    </div>`);
+
   $("#search").submit(function(event) {
     event.preventDefault();
     $("#player-list").html("");

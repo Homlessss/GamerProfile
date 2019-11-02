@@ -9,7 +9,7 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../front-end/frontend.css">
+    <link rel="stylesheet" href="../front-end/frontend.css" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -41,10 +41,10 @@
   <body>
     <header>
       <!-- Navigation -->
-      <nav class="navbar navbar-expand-xl navbar-light bg-light static-top">
+      <nav class="navbar navbar-expand-xl navbar-light static-top header">
         <div class="container">
-          <a class="navbar-brand" href="../front-end/frontend.html">
-            <img src="../logo-image/Logo project.png" alt="" />
+          <a class="navbar-brand" href="#">
+            <img src="../logo-image/logo.png" height="50px" alt="" />
           </a>
           <button
             class="navbar-toggler"
@@ -57,16 +57,28 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
+          <div
+            class="collapse navbar-collapse header-nav"
+            id="navbarResponsive"
+          >
+            <ul class="navbar-nav nav-tabs">
+              <li class="nav-item">
                 <a class="nav-link" href="../front-end/frontend.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link player-info" href="../playerInfo/playerInfo.html">Information Gamer</a>
+                <a
+                  class="nav-link player-info"
+                  href="../playerInfo/playerInfo.html"
+                  >Information Gamer</a
+                >
               </li>
-              <li class="nav-item">
-                <a class="nav-link hight-light" href="../hightlight/highlight.html">HightLight</a>
+              <li class="nav-item here">
+                <a
+                  id="nav-a"
+                  class="nav-link hight-light"
+                  href="../hightlight/highlight.html"
+                  >HighLight</a
+                >
               </li>
             </ul>
           </div>

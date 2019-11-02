@@ -88,19 +88,32 @@
     </header>
 
     <main class="main-body">
-      <div class="search">
+      <form class="search">
         <div class="input-group">
-          <input
-            type="text"
-            class="search-input"
-            placeholder=""
-            aria-label=""
-            aria-describedby="basic-addon1"
-          />
+          <div id="namer">
+            <div id="namer-input">
+              <input
+                type="text"
+                name="namername"
+                placeholder="Type your name"
+                id="keyword"
+              />
+            </div>
+          </div>
           <div class="search-btn">
-            <button class="btn btn-success" type="button">Search</button>
+            <input
+              class="btn btn-success"
+              type="button"
+              type="submit"
+              value="Search"
+              id="search"
+            />
           </div>
         </div>
+      </form>
+      <div id="hide"></div>
+      <div class="row list">
+        <div class="col-md-12" id="player-list"></div>
       </div>
     </main>
 

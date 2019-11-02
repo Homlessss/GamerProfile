@@ -28,7 +28,7 @@ $(document).ready(function() {
             <td class="col-lg-3" id="nameData${id[i]}">${data.data[i].name}</td>
             <td class="col-lg-2" id="teamData${id[i]}">${data.data[i].team}</td>
             <td class="col-lg-2" id="nationalityData${id[i]}">${data.data[i].nationality}</td>
-            <td class="col-lg-3" id="imageData${id[i]}"><img src="${data.data[i].image}" alt="Avatar" height="90"></td>
+            <td class="col-lg-3" id="imageData${id[i]}"><img id="imageTagData${id[i]}" src="${data.data[i].image}" alt="Avatar" height="90"></td>
             <td class="col-lg-1" id="laneData${id[i]}">${data.data[i].lane}</td>
             <td class="col-lg-1" id="td-btn">
               <button class="btn btn-outline-secondary btn-edit" id="btn-edit${id[i]}" onclick="editData('${id[i]}')"
@@ -154,6 +154,18 @@ function deleteFunc(id) {
 function editData(btn_id2) {
   selectedId = btn_id2;
   btn_id2 = 0;
+  strName = document.getElementById(`nameData${selectedId}`).innerHTML;
+  document.getElementById("update-name").value = strName;
+  console.log(strName);
+  strTeam = document.getElementById(`teamData${selectedId}`).innerHTML;
+  document.getElementById("update-team").value = strTeam;
+
+  strNationality = document.getElementById(`nationalityData${selectedId}`)
+    .innerHTML;
+  document.getElementById("update-nationality").value = strNationality;
+
+  strLane = document.getElementById(`laneData${selectedId}`).innerHTML;
+  document.getElementById("update-lane").value = strLane;
 }
 
 function updateData(id) {

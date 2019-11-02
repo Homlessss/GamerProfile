@@ -19,7 +19,14 @@ tr:hover > #td-btn {
   width: 200px;
   border-top: 1px solid white;
 }
+#btnControl {
+  display: none;
+}
 
+#btnControl:checked + .btn-edit > img {
+  opacity: 1;
+  border-top: 1px solid white;
+}
 td {
   height: 100px;
 }
@@ -37,7 +44,10 @@ td {
   margin: 0 150px 10px 150px;
   border-top: none;
 }
-
+.drop-edit {
+  width: 400px;
+  left: 70%;
+}
 #th-fix {
   background-color: white;
   color: white;

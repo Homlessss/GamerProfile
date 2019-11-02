@@ -11,3 +11,8 @@
     margin-top: 5%;
     margin-bottom: 10%;
 }
+
+.nav-item a {
+    color:#696969 !important;
+    font-size: 20px;
+}

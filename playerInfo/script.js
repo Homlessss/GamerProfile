@@ -5,9 +5,10 @@ $(document).ready(function() {
   $(".main-body").append(`
             <div class="row">
                 <div class="col-md-12 text-center">
+                    <h2 class="title">Find a Pro Player</h2>
                     <form id="search" method="POST">
                         <div class="form-group">
-                            <input type="text" name="name" id="keyword" class="form-control" required>
+                            <input type="text" name="name" id="keyword" class="form-control" placeholder="Search..." required>
                             <br>
                             <input type="submit" class="btn btn-primary form-control" value="Submit"/>
                         </div>
@@ -26,7 +27,6 @@ $(document).ready(function() {
     str1 = inputVal.slice(0, 1);
     str2 = inputVal.slice(1);
     inputVal = str1.toUpperCase() + str2.toLowerCase();
-    console.log(inputVal);
     $.ajax({
       type: "GET",
       url: `http://localhost:3000/api/player?name=${inputVal}`,

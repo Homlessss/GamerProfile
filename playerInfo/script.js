@@ -1,18 +1,19 @@
-$(document).ready(function() {
-  $(".player-info").click(function(event) {
-    event.preventDefault();
-    $(".main-body").html("");
-    $(".main-body").append(`<div class="row">
-        <div class="col-md-12 text-center">
-            <form id="search">
-                <div class="form-group">
-                    <input type="text" name="name" id="keyword" class="form-control" required>
-                    <br>
-                    <input type="submit" class="btn btn-primary form-control" value="Submit"/>
+$(document).ready(function () {
+    // $(".player-info").click(function(event){
+    //     event.preventDefault();
+        $(".main-body").html("");
+        $(".main-body").append(`
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <form id="search" method="POST">
+                        <div class="form-group">
+                            <input type="text" name="name" id="keyword" class="form-control" required>
+                            <br>
+                            <input type="submit" class="btn btn-primary form-control" value="Submit"/>
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-    </div>
+            </div>
     <div class="row">
         <div class="col-md-12" id="player-list">
           
@@ -57,15 +58,19 @@ $(document).ready(function() {
                                         <p>${data.data[i].biography}</p>
                                     </div>
                                 </div>
-                            </div>
-                        `);
-            }
-          }
-        },
-        error: function(err) {
-          console.log(err);
-        }
-      });
-    });
-  });
+                                `);
+                            }
+                        }
+                        
+                        
+                    }
+                },
+                error: function (err) {
+                        console.log(err);
+                    }
+                })
+            });
+    
+    // });
+  
 });

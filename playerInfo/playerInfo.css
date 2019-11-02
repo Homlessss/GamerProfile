@@ -1,0 +1,11 @@
+.main-body{
+    height: 100%;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}

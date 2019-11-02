@@ -103,33 +103,19 @@ $(document).ready(function() {
       document.elementFromPoint(0, 0).click();
     }
   });
-  // for chạy từ btn-edit1 -> hết
-  // nếu bằng id lấy dc từ nút delete thì dừng và lấy i, rồi xóa id
-
-  $("#exampleModal").on("show.bs.modal", function(event) {
-    var button = $(event.relatedTarget); // Button that triggered the modal
-    var recipient = button.data("whatever"); // Extract info from data-* attributes
-    // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-    // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-    var modal = $(this);
-    modal.find(".modal-title").text("Information");
-  });
-  function test() {
-    var t1 = document.getElementsByClassName("btn-delete");
-  }
 });
 function deleteData(btn_id) {
   for (let i = 0; i < n; i++) {
     if (btn_id === `btn-delete${i}`) {
       $("#deleteConf").click(function() {
         {
-          // $.ajax({
-          //   type: "DELETE",
-          //   url: `http://localhost:3000/api/player/${id[i]}`,
-          //   contentType: "application/json",
-          //   success: console.log("done"),
-          //   error: console.log("e")
-          // });
+          $.ajax({
+            type: "DELETE",
+            url: `http://localhost:3000/api/player/${id[i]}`,
+            contentType: "application/json",
+            success: console.log("done"),
+            error: console.log("e")
+          });
           $("tr").remove(`#row${i}`);
           document.elementFromPoint(0, 0).click();
         }
@@ -142,24 +128,24 @@ function editData(btn_id2) {
     if (btn_id2 === `btn-edit${i}`) {
       $("#updatePlayer").click(function() {
         console.log(`${id[i]}`);
-        // $.ajax({
-        //   type: "PUT",
-        //   url: `http://localhost:3000/api/player/${id[i]}`,
-        //   contentType: "application/json",
-        //   data: JSON.stringify({
-        //     name: $("#update-name").val(),
-        //     team: $("#update-team").val(),
-        //     nationality: $("#update-nationality").val(),
-        //     lane: $("#update-lane").val(),
-        //     image: $("#update-img").val()
-        //   }),
-        //   success: function(data) {
-        //     console.log(data);
-        //   },
-        //   error: function(err) {
-        //     console.log("e", err);
-        //   }
-        // });
+        $.ajax({
+          type: "PUT",
+          url: `http://localhost:3000/api/player/${id[i]}`,
+          contentType: "application/json",
+          data: JSON.stringify({
+            name: $("#update-name").val(),
+            team: $("#update-team").val(),
+            nationality: $("#update-nationality").val(),
+            lane: $("#update-lane").val(),
+            image: $("#update-img").val()
+          }),
+          success: function(data) {
+            console.log(data);
+          },
+          error: function(err) {
+            console.log("e", err);
+          }
+        });
         if ($("#update-name").val()) {
           document.getElementById("nameData").innerHTML = $(
             "#update-name"

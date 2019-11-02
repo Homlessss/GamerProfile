@@ -144,7 +144,9 @@ function deleteFunc(id) {
     success: function(data) {
       $("tr").remove(`#row${id}`);
     },
-    error: console.log("e", error)
+    error: function(err) {
+      console.log("e", err);
+    }
   });
   document.elementFromPoint(0, 0).click();
 }
@@ -189,9 +191,9 @@ function updateData(id) {
         ).val();
       }
       if ($("#update-img").val()) {
-        document.getElementById(`imageData${id}`).innerHTML = $(
+        document.getElementById(`imageData${id}`).innerHTML = `<img src="${$(
           "#update-img"
-        ).val();
+        ).val()}" alt="Avatar" height="90">`;
       }
       document.elementFromPoint(0, 0).click();
       selectedId = undefined;

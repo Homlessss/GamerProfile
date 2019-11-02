@@ -10,38 +10,42 @@ const findById = async function(user, id) {
 };
 
 const create = async function(data) {
-  if (!data.name || !data.team) {
-    throw new Error("Missing input");
+  let auth = authService.authorization(user, ["admin"]);
+  if (auth) {
+    if (!data.name || !data.team) {
+      throw new Error("Missing input");
+    } else {
+      return await repository.create(data);
+    }
   } else {
-    return await repository.create(data);
+    throw new Error("Unauthorized!");
   }
 };
 
 const update = async function(user, id, data) {
+  let auth = authService.authorization(user, ["admin"]);
   const existedData = await repository.findById(id);
-  // if (auth) {
-
-  // } else {
-  //   throw new Error("Unauthorized!");
-  // }
-  if (!existedData) {
-    throw new Error("Not found");
+  if (auth) {
+    if (!existedData) {
+      throw new Error("Not found");
+    } else {
+      return await repository.update(id, data);
+    }
   } else {
-    return await repository.update(id, data);
+    throw new Error("Unauthorized!");
   }
 };
 const deleteOne = async function(user, id) {
   const existedData = await repository.findById(id);
-  // let auth = authService.authorization(user, ["admin"]);
-  // if (auth) {
-
-  // } else {
-  //   throw new Error("Unauthorized!");
-  // }
-  if (!existedData) {
-    throw new Error("Not found");
+  let auth = authService.authorization(user, ["admin"]);
+  if (auth) {
+    if (!existedData) {
+      throw new Error("Not found");
+    } else {
+      return await repository.delete(id);
+    }
   } else {
-    return await repository.delete(id);
+    throw new Error("Unauthorized!");
   }
 };
 

@@ -27,7 +27,7 @@ router.get("/:id", async function(req, res) {
   }
 });
 
-router.post("/", async function(req, res) {
+router.post("/", authService.authentication, async function(req, res) {
   try {
     const data = await service.create(req.body);
     res.status(200).send({
@@ -40,7 +40,7 @@ router.post("/", async function(req, res) {
   }
 });
 
-router.put("/:id", async function(req, res) {
+router.put("/:id", authService.authentication, async function(req, res) {
   try {
     const data = await service.update(req.user, req.params.id, req.body);
     res.status(200).send({
@@ -53,7 +53,7 @@ router.put("/:id", async function(req, res) {
   }
 });
 
-router.delete("/:id", async function(req, res) {
+router.delete("/:id", authService.authentication, async function(req, res) {
   try {
     const data = await service.delete(req.user, req.params.id);
     res.status(200).send({

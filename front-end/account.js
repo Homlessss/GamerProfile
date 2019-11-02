@@ -1,6 +1,7 @@
 const LOGIN_API_URL = "http://localhost:3000/api/auth/login";
 
-const url = "./page.html";
+const url = "./admin.html";
+const url2 = "http://192.168.137.1:8080/admin.html";
 $(document).ready(function() {
   $(".buttonLog").click(function(e) {
     e.preventDefault();
@@ -19,6 +20,7 @@ $(document).ready(function() {
         // checkCookie();
         createCookie(data);
         console.log(data);
+        window.location.href = url2;
       },
       error: function(err) {
         console.log("e", err);

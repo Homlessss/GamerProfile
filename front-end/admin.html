@@ -142,7 +142,7 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             No
           </button>
-          <button type="button" class="btn btn-primary" id="deleteConf">
+          <button type="button" class="btn btn-primary" id="deleteConf" onclick="deleteFunc(selectedId)">
             Yes
           </button>
         </div>
@@ -206,7 +206,12 @@
           <button type="button" class="btn btn-secondary" data-dismiss="modal">
             Close
           </button>
-          <button type="button" class="btn btn-primary" id="updatePlayer">
+          <button
+            type="button"
+            class="btn btn-primary"
+            onclick="updateData(selectedId)"
+            id="updatePlayer"
+          >
             Update
           </button>
         </div>

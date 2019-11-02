@@ -5,7 +5,6 @@ $(document).ready(function() {
 
   $("#search").click(function(event) {
     event.preventDefault();
-    document.getElementById("hide").style.display = "none";
     $("#player-list").html("");
     let inputVal = $("#keyword").val();
     console.log("here");
@@ -53,6 +52,7 @@ function getTeam(inputVal) {
         }
       }
     },
+
     error: function(err) {
       console.log(err);
     }

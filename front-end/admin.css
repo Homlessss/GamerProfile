@@ -53,12 +53,4 @@ td {
   color: white;
   border: none;
 }
-#loading {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -50px;
-  margin-left: -100px;
-  width: 100px;
-  height: 100px;
-}
+

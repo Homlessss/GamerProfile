@@ -2,6 +2,7 @@
   background-image: url("https://lol.gamepedia.com/media/c/ce/Background_2019_light.jpg");
   background-attachment: fixed;
   background-size: cover;
+  min-height: 800px;
 }
 
 .row {
@@ -143,8 +144,8 @@
 #namer input {
   border: none;
   border-radius: 40px;
-  width: 500px;
   font-size: 35px;
+  width: 100%;
   line-height: 35px;
   height: 70px;
   text-align: center;
@@ -154,9 +155,12 @@
 }
 
 #namer {
+  display: block;
   position: relative;
-  max-width: 400px;
-  margin: 150px auto 0;
+  width: 500px;
+  left: 50%;
+  top: 130px;
+  margin-left: -250px;
 }
 #namer input:focus {
   outline: 0;
@@ -169,7 +173,26 @@
 }
 #hide {
   display: block;
-  height: 100vh;
+  height: 700px;
 }
 
+#search {
+  position: relative;
+  left: 62%;
+  display: block;
+  margin-left: -25px;
+  width: 100px;
+  height: 70px;
+  background-color: #3498db;
+  top: 60px;
+  border: none;
+  border-radius: 40px;
+}
 
+#search:hover {
+  background-color: #3c82b1;
+}
+
+.search {
+  margin-bottom: 150px;
+}

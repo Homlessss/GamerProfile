@@ -26,3 +26,10 @@
   width: 100px;
   height: 100px;
 }
+
+.main-body {
+  background-image: url("https://lol.gamepedia.com/media/c/ce/Background_2019_light.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 800px;
+}

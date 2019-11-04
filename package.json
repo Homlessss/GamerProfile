@@ -26,5 +26,6 @@
     "session": "^0.1.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "script" : "start"
 }

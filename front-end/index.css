@@ -17,11 +17,11 @@
 
 .page-footer-home {
   width: 100%;
-  height: 100px;
+  height: 200px;
   display: block;
   position: relative;
   bottom: 0;
-  background: #fff;
+  background: #696969;
   padding: 0;
   border-top: 1px solid black;
   z-index: 10000;
@@ -95,6 +95,11 @@
   background: #ce3f34;
 }
 
+.footer-copyright{
+  text-align: center;
+  color: white;
+}
+
 @media only screen and (max-width: 500px) {
   .row {
     display: block;
@@ -121,9 +126,9 @@
 }
 
 .here {
-  background: #00acee;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  background: #C9AA72;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
 
 .here:hover {
@@ -157,9 +162,9 @@
 }
 #namer input:focus {
   outline: 0;
-  color: #3498db;
+  color: #C9AA72;
   transition: ease 0.3s;
-  border: 3px solid #3498db;
+  border: 3px solid #C9AA72;
 }
 #namer input::placeholder {
   color: #918989ba;
@@ -172,14 +177,14 @@
   margin-left: -25px;
   width: 100px;
   height: 70px;
-  background-color: #3498db;
+  background-color: #C9AA72;
   top: 60px;
   border: none;
   border-radius: 40px;
 }
 
 #search:hover {
-  background-color: #3c82b1;
+  background-color: #BDAC70;
 }
 
 .search {

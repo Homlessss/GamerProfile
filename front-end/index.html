@@ -9,9 +9,8 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="../front-end/frontend.css" />
-    <link rel="stylesheet" href="./playerInfo.css">
-
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="landingpage.css">
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
@@ -35,7 +34,8 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./script.js"></script>
+    <!-- <script src="../hightlight/main.js"></script>
+    <script src="../playerInfo/script.js"></script> -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
 
@@ -45,7 +45,7 @@
       <nav class="navbar navbar-expand-xl navbar-light static-top header">
         <div class="container">
           <a class="navbar-brand" href="#">
-            <img src="../logo-image/logo.png" height="50px" alt="" />
+            <img src="/logo-image/logo.png" height="50px" alt="" />
           </a>
           <button
             class="navbar-toggler"
@@ -63,21 +63,20 @@
             id="navbarResponsive"
           >
             <ul class="navbar-nav nav-tabs">
-              <li class="nav-item active">
-                <a class="nav-link" href="../front-end/frontend.html">Home</a>
-              </li>
               <li class="nav-item here">
+                <a class="nav-link" id="nav-a" href="./index.html">Home</a>
+              </li>
+              <li class="nav-item">
                 <a
                   class="nav-link player-info"
-                  id="nav-a"
-                  href="../playerInfo/playerInfo.html"
+                  href="/playerInfo/index.html"
                   >Information Gamer</a
                 >
               </li>
               <li class="nav-item">
                 <a
                   class="nav-link hight-light"
-                  href="../hightlight/highlight.html"
+                  href="/highlight/index.html"
                   >HighLight</a
                 >
               </li>
@@ -87,32 +86,15 @@
       </nav>
     </header>
 
-    <main class="main-body">
-      <form class="search">
-        <div class="input-group">
-          <div id="namer">
-            <div id="namer-input">
-              <input
-                type="text"
-                name="namername"
-                placeholder="Type your name"
-                id="keyword"
-              />
-            </div>
-          </div>
+    <main class="main-body container-fluid">
+      <div class="slider">
+        <div class="content-slider">
+          <h1>Welcome to the Gamer's Profile</h1>
+          <p>Do you want to find information about a gamer?</p>
+          <br>
+          <a href="/playerInfo/index.html" class="button">Let's go</a>
         </div>
-        <div class="search-btn">
-          <input
-            class="btn btn-primary"
-            type="submit"
-            value="Search"
-            id="search"
-          />
-        </div>
-      </form>
-
-      <div id="player-list"></div>
-      <div style="height: 20px;"></div>
+      </div>
     </main>
 
     <!-- Footer -->
@@ -158,5 +140,6 @@
       <!-- Footer Links -->
     </footer>
     <!-- Footer -->
+    
   </body>
 </html>

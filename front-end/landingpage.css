@@ -40,18 +40,18 @@
 
 @keyframes slide {
     0%{
-        background-image: url('../logo-image/img5.jpg');
+        background-image: url('/logo-image/img5.jpg');
     }
     20%{
-        background-image: url('../logo-image/img1.jpg');
+        background-image: url('/logo-image/img1.jpg');
     }
     40%{
-        background-image: url('../logo-image/img2.jpg');
+        background-image: url('/logo-image/img2.jpg');
     }
     60%{
-        background-image: url('../logo-image/img3.jpg');
+        background-image: url('/logo-image/img3.jpg');
     }
     80%{
-        background-image: url('../logo-image/img4.jpg');
+        background-image: url('/logo-image/img4.jpg');
     }
 }

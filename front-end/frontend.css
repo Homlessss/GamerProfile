@@ -1,10 +1,3 @@
-.main-body {
-  background-image: url("https://lol.gamepedia.com/media/c/ce/Background_2019_light.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  min-height: 800px;
-}
-
 .row {
   display: flex;
   justify-content: center;
@@ -170,10 +163,6 @@
 }
 #namer input::placeholder {
   color: #918989ba;
-}
-#hide {
-  display: block;
-  height: 700px;
 }
 
 #search {

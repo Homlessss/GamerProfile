@@ -196,3 +196,38 @@
 .search {
   margin-bottom: 150px;
 }
+.content {
+  height: 300px;
+  display: flex;
+  background-color: white;
+  margin: 20px 200px 0px 200px;
+  border: 6px solid black;
+  border-radius: 20px ;
+  
+}
+.imgProfile {
+ /* position: relative;
+ top: 20px;
+  height: 250px;
+  border: 2px solid #00acee;
+  border-radius: 25%/50%; */
+  height: 250px;
+  min-height: 100%;
+    min-width: 100%;
+}
+.imgContent {
+
+  bottom: 0px;  
+  margin: 0 0 0 530px ;
+}
+.info {
+margin: 10px 20px;
+}
+
+#infoName {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+#infoLane {
+}

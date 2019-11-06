@@ -182,14 +182,14 @@
   margin-left: -25px;
   width: 100px;
   height: 70px;
-  background-color: #c9aa72;
+  background-color: black;
   top: 60px;
   border: none;
   border-radius: 40px;
 }
 
 #search:hover {
-  background-color: #bdac70;
+  background-color: #ac8c52;
 }
 
 .search {

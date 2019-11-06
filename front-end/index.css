@@ -205,10 +205,10 @@
   }
   #search {
     left: 70%;
-    display: block;
     width: 100px;
   }
 }
+
 @media only screen and (max-width: 650px) {
   #namer {
     width: 70%;
@@ -217,11 +217,18 @@
   }
   #search {
     left: 70%;
-    display: block;
     width: 100px;
   }
 }
-
+@media only screen and (max-width: 550px) {
+  #search {
+    left: 50%;
+    top: 135px;
+    width: 200px;
+    margin-left: -100px;
+    height: 40px;
+  }
+}
 .search {
   margin-bottom: 150px;
 }

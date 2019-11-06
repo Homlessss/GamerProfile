@@ -185,13 +185,14 @@
   background-color: #c9aa72;
   top: 60px;
   border: none;
+  color: white;
+  outline: none;
   border-radius: 40px;
 }
 
 #search:hover {
   background-color: #ac8c52;
   border: 3px solid #c9aa72;
-
 }
 
 .search {
@@ -232,4 +233,3 @@
   text-align: center;
   font-weight: normal;
 }
-

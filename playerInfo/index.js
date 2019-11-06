@@ -1,16 +1,13 @@
 var field;
 $(document).ready(function() {
-  // $(".player-info").click(function(event){
-  //     event.preventDefault();
-
   $("#search").click(function(event) {
     event.preventDefault();
     $("#player-list").html("");
-    let inputVal = $("#keyword").val();
-    console.log("here");
-    inputVal = inputVal.toLowerCase();
+    let inputVal = $("#keyword").val().toLowerCase();
+    guide();
     getTeam(inputVal);
     getPlayer(inputVal);
+    guide();
   });
 });
 function getTeam(inputVal) {
@@ -33,12 +30,12 @@ function getTeam(inputVal) {
           str2 = strTeam.slice(1);
           strTeam = str1.toUpperCase() + str2;
 
-          strLane = data.data[i].name;
+          strLane = data.data[i].lane;
           str1 = strLane.slice(0, 1);
           str2 = strLane.slice(1);
           strLane = str1.toUpperCase() + str2;
 
-          strNationality = data.data[i].name;
+          strNationality = data.data[i].nationality;
           str1 = strNationality.slice(0, 1);
           str2 = strNationality.slice(1);
           strNationality = str1.toUpperCase() + str2;
@@ -47,9 +44,9 @@ function getTeam(inputVal) {
             <div class="content">
             <div class="info">
               <p id="infoName">${strName}</p>
-              <p id="infoLane">${strLane}</p>
-              <p id="infoTeam">Team: ${strTeam}</p>
-              <p id="infoNation">Nationality: ${strNationality}</p>
+              <p id="infoLane"><b>Role:</b> ${strLane}</p>
+              <p id="infoTeam"><b>Team:</b> ${strTeam}</p>
+              <p id="infoNation"><b>Nationality:</b> ${strNationality}</p>
               
             </div>
             <div class="imgContent">
@@ -87,12 +84,12 @@ function getPlayer(inputVal) {
           str2 = strTeam.slice(1);
           strTeam = str1.toUpperCase() + str2;
 
-          strLane = data.data[i].name;
+          strLane = data.data[i].lane;
           str1 = strLane.slice(0, 1);
           str2 = strLane.slice(1);
           strLane = str1.toUpperCase() + str2;
 
-          strNationality = data.data[i].name;
+          strNationality = data.data[i].nationality;
           str1 = strNationality.slice(0, 1);
           str2 = strNationality.slice(1);
           strNationality = str1.toUpperCase() + str2;
@@ -101,9 +98,9 @@ function getPlayer(inputVal) {
           <div class="content">
                 <div class="info">
                   <p id="infoName">${strName}</p>
-                  <p id="infoLane">${strLane}</p>
-                  <p id="infoTeam">Team: ${strTeam}</p>
-                  <p id="infoNation">Nationality: ${strNationality}</p>
+                  <p id="infoLane"><b>Role:</b> ${strLane}</p>
+                  <p id="infoTeam"><b>Team:</b> ${strTeam}</p>
+                  <p id="infoNation"><b>Nationality:</b> ${strNationality}</p>
                   
                 </div>
                 <div class="imgContent">
@@ -119,4 +116,12 @@ function getPlayer(inputVal) {
       console.log(err);
     }
   });
+}
+
+function guide(){
+  if (!$("#player-list").html('')){
+      $(".guide").show();  
+  }else{
+      $(".guide").hide();    
+  }
 }

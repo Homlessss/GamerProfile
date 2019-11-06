@@ -9,7 +9,7 @@ const authRouter = require("./Server/api/module/auth/auth.router");
 const teamRouter = require("./Server/api/module/teams/team.router");
 
 mongoose.connect(config.mongoConnectionString);
-// const PORT = 3000;
+const PORT = 3000;
 
 const app = express();
 app.use(cors());

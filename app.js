@@ -10,6 +10,8 @@ const teamRouter = require("./Server/api/module/teams/team.router");
 
 mongoose.connect(config.mongoConnectionString);
 
+const port = process.env.PORT || 3000
+
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
@@ -22,6 +24,7 @@ app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/team", teamRouter);
 
-app.listen(process.env.PORT || 3000, function() {
-  console.log(`Server listening in 3000`);
+app.listen(port, function() {
+  console.log(`Server listening in` + port);
 });
+

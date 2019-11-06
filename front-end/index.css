@@ -190,6 +190,8 @@
 
 #search:hover {
   background-color: #ac8c52;
+  border: 3px solid #c9aa72;
+
 }
 
 .search {
@@ -229,4 +231,13 @@
 .guide {
   text-align: center;
   font-weight: normal;
+}
+.home:hover {
+  background-color: #ac8c52;
+}
+.player-info:hover {
+  background-color: #ac8c52;
+}
+.hight-light:hover {
+  background-color: #ac8c52;
 }

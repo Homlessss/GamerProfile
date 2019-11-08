@@ -110,7 +110,7 @@ $(document).ready(function() {
         },
         error: function(err) {
           console.log("e", err);
-          alert(err);
+          alert(err.responseJSON.error);
         }
       });
       n++;
@@ -156,7 +156,7 @@ function deleteFunc(id) {
     },
     error: function(err) {
       console.log("e", err);
-      alert(err);
+      alert(err.responseJSON.error);
     }
   });
   document.elementFromPoint(0, 0).click();
@@ -225,6 +225,7 @@ function updateData(id) {
       console.log("e", err);
       document.elementFromPoint(0, 0).click();
       selectedId = undefined;
+      alert(err.responseJSON.error);
     }
   });
 }

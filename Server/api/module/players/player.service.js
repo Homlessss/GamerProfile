@@ -48,6 +48,7 @@ const deleteOne = async function(user, id) {
     }
   } else {
     throw new Error("Unauthorized!");
+    alert("Unauthorized!");
   }
 };
 

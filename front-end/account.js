@@ -29,6 +29,7 @@ $(document).ready(function() {
             if (data[0].role === "admin") {
               window.location.href = url2;
             }
+            $("#btn-login").html("Log out");
           },
           error: function(err) {
             console.log("e", err);

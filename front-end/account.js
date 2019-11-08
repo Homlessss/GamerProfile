@@ -32,7 +32,7 @@ $(document).ready(function() {
     console.log("q");
     $.ajax({
       type: "POST",
-      url: `http://localhost:3000/api/auth/register`,
+      url: `https://gamer-profile.herokuapp.com/api/auth/register`,
       contentType: "application/json",
       data: JSON.stringify({
         email: $("#emailReg").val(),

@@ -26,10 +26,12 @@ $(document).ready(function() {
             if (data[0].role === "user") {
               window.location.href = url;
               $("#btn-login").text("Log out");
+              logout();
             }
             if (data[0].role === "admin") {
               window.location.href = url2;
               $("#btn-login").text("Log out");
+              logout();
             }
           },
           error: function(err) {
@@ -109,6 +111,7 @@ function logout() {
     // deal with errors
     alert(error);
   }
+  window.location.href = "https://gamer-profile.herokuapp.com/index.html";
 }
 
 function checkCookie() {

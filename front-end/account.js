@@ -29,7 +29,7 @@ $(document).ready(function() {
             }
             if (data[0].role === "admin") {
               window.location.href = url2;
-              $("#btn-login").html("Log out");
+              $("#btn-login").val("Log out");
             }
           },
           error: function(err) {

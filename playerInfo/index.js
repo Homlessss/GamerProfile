@@ -15,7 +15,7 @@ function getTeam(inputVal) {
   console.log(`${inputVal}`);
   $.ajax({
     type: "GET",
-    url: `http://localhost:3000/api/player?team=${inputVal}`,
+    url: `http://gamer-profile.herokuapp.com/api/player?team=${inputVal}`,
     success: function(data) {
       console.log(data);
       if (data && data.data) {
@@ -69,7 +69,7 @@ function getPlayer(inputVal) {
   console.log(`${inputVal}`);
   $.ajax({
     type: "GET",
-    url: `http://localhost:3000/api/player?name=${inputVal}`,
+    url: `http://gamer-profile.herokuapp.com/api/player?name=${inputVal}`,
     success: function(data) {
       console.log(data);
       if (data && data.data) {

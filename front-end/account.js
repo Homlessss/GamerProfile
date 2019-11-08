@@ -25,11 +25,11 @@ $(document).ready(function() {
             console.log(data[0].role);
             if (data[0].role === "user") {
               window.location.href = url;
-              $("#btn-login").val("Log out");
+              $("#btn-login").text("Log out");
             }
             if (data[0].role === "admin") {
               window.location.href = url2;
-              $("#btn-login").val("Log out");
+              $("#btn-login").text("Log out");
             }
           },
           error: function(err) {

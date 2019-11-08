@@ -12,7 +12,7 @@ $(document).ready(function() {
     });
   $.ajax({
     type: "GET",
-    url: `http://localhost:3000/api/player`,
+    url: `https://gamer-profile.herokuapp.com/api/player`,
     success: function(data) {
       if (data && data.data) {
         console.log(data);
@@ -61,7 +61,7 @@ $(document).ready(function() {
     } else {
       $.ajax({
         type: "POST",
-        url: `http://localhost:3000/api/player`,
+        url: `https://gamer-profile.herokuapp.com/api/player`,
         contentType: "application/json",
         data: JSON.stringify({
           name: $("#add-name").val(),
@@ -139,7 +139,7 @@ function deleteFunc(id) {
   if (!id) return;
   $.ajax({
     type: "DELETE",
-    url: `http://localhost:3000/api/player/${id}`,
+    url: `https://gamer-profile.herokuapp.com/api/player/${id}`,
     contentType: "application/json",
     success: function(data) {
       $("tr").remove(`#row${id}`);
@@ -172,7 +172,7 @@ function updateData(id) {
   if (!id) return;
   $.ajax({
     type: "PUT",
-    url: `http://localhost:3000/api/player/${id}`,
+    url: `https://gamer-profile.herokuapp.com/api/player/${id}`,
     contentType: "application/json",
     data: JSON.stringify({
       name: $("#update-name").val(),

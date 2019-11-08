@@ -24,30 +24,42 @@ const create = async function(data) {
 };
 
 const update = async function(user, id, data) {
-  // let auth = authService.authorization(user, ["admin"]);
-  const existedData = await repository.findById(id);
-  // if (auth) {
-
-  // } else {
-  //   throw new Error("Unauthorized!");
-  // }
-  if (!existedData) {
-    throw new Error("Not found");
-  } else {
-    return await repository.update(id, data);
-  }
-};
-const deleteOne = async function(user, id) {
-  const existedData = await repository.findById(id);
   let auth = authService.authorization(user, ["admin"]);
+  const existedData = await repository.findById(id);
   if (auth) {
     if (!existedData) {
       throw new Error("Not found");
     } else {
-      return await repository.delete(id);
+      return await repository.update(id, data);
     }
   } else {
     throw new Error("Unauthorized!");
+  }
+
+  // const existedData = await repository.findById(id);
+  // if (!existedData) {
+  //   throw new Error("Not found");
+  // } else {
+  //   return await repository.update(id, data);
+  // }
+};
+const deleteOne = async function(user, id) {
+  const existedData = await repository.findById(id);
+  // let auth = authService.authorization(user, ["admin"]);
+  // if (auth) {
+  //   if (!existedData) {
+  //     throw new Error("Not found");
+  //   } else {
+  //     return await repository.delete(id);
+  //   }
+  // } else {
+  //   throw new Error("Unauthorized!");
+  // }
+
+  if (!existedData) {
+    throw new Error("Not found");
+  } else {
+    return await repository.delete(id);
   }
 };
 

@@ -4,7 +4,11 @@
   align-items: center;
   text-align: center;
 }
-
+.main-body {
+  background-image: url("https://lol.gamepedia.com/media/c/ce/Background_2019_light.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+}
 .navbar {
   width: 100%;
   display: block;
@@ -17,7 +21,7 @@
 
 .page-footer-home {
   width: 100%;
-  height: 200px;
+  height: 120px;
   display: block;
   position: relative;
   bottom: 0;
@@ -29,10 +33,7 @@
 
 .socials-share {
   text-align: center;
-  margin: 30px 30px;
-}
-.footer-btn {
-  margin: 0 10px;
+  margin: 10px 30px 10px 30px;
 }
 
 .socials-share a {
@@ -50,52 +51,7 @@
   margin-right: 3px;
 }
 
-.bg-facebook {
-  background: #3a5899;
-}
-
-.bg-facebook:hover,
-.bg-facebook:focus {
-  background: #1d418d;
-}
-
-.bg-twitter {
-  background: #00acee;
-}
-
-.bg-twitter:hover,
-.bg-twitter:focus {
-  background: #0b93c7;
-}
-
-.bg-google-plus {
-  background: #db4437;
-}
-
-.bg-google-plus:hover,
-.bg-google-plus:focus {
-  background: #bb2a1d;
-}
-
-.bg-pinterest {
-  background: #cb1e26;
-}
-
-.bg-pinterest:hover,
-.bg-pinterest:focus {
-  background: #ae0e15;
-}
-
-.bg-email {
-  background: #dd5348;
-}
-
-.bg-email:hover,
-.bg-email:focus {
-  background: #ce3f34;
-}
-
-.footer-copyright{
+.footer-copyright {
   text-align: center;
   color: white;
 }
@@ -104,6 +60,29 @@
   .row {
     display: block;
   }
+}
+.icon-footer {
+  margin: 10px 30px;
+  transition: 0.2s;
+  opacity: 0.7;
+}
+.icon-footer:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.span-footer {
+  color: white;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: 0.2s;
+
+  margin: 10px 30px;
+}
+.span-footer:hover {
+  cursor: pointer;
+  opacity: 1;
+  text-decoration: underline;
 }
 
 .nav-img img {
@@ -126,7 +105,7 @@
 }
 
 .here {
-  background: #C9AA72;
+  background: #c9aa72;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
@@ -149,22 +128,23 @@
   text-align: center;
   padding: 10px;
   background-color: white;
-  color: #3498db;
+  color: #c9aa72;
 }
 
 #namer {
   display: block;
   position: relative;
-  width: 500px;
+  width: 40%;
   left: 50%;
   top: 130px;
-  margin-left: -250px;
+  margin-left: -20%;
+  transition: 0.5s;
 }
 #namer input:focus {
   outline: 0;
-  color: #C9AA72;
+  color: #c9aa72;
   transition: ease 0.3s;
-  border: 3px solid #C9AA72;
+  border: 3px solid #c9aa72;
 }
 #namer input::placeholder {
   color: #918989ba;
@@ -172,21 +152,82 @@
 
 #search {
   position: relative;
-  left: 62%;
+  left: 64%;
   display: block;
-  margin-left: -25px;
   width: 100px;
   height: 70px;
-  background-color: #C9AA72;
+  background-color: #c9aa72;
   top: 60px;
   border: none;
+  color: white;
+  outline: none;
   border-radius: 40px;
+  transition: 0.5s;
 }
 
 #search:hover {
-  background-color: #BDAC70;
+  background-color: #ac8c52;
+  border: 3px solid #c9aa72;
 }
 
+#navbarResponsive {
+  transition: 0.5s;
+}
+
+@media only screen and (max-width: 990px) {
+  #navbarResponsive {
+    margin-left: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #navbarResponsive {
+    margin-left: 50% !important;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .nav-respon {
+    margin-right: 1px !important;
+    left: 11%;
+    transition: 0.5s;
+  }
+  #navbarResponsive {
+    margin-left: 50% !important;
+  }
+}
+@media only screen and (max-width: 960px) {
+  #namer {
+    width: 60%;
+    left: 50%;
+    margin-left: -30%;
+  }
+  #search {
+    left: 70%;
+    width: 100px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #namer {
+    width: 70%;
+    left: 50%;
+    margin-left: -35%;
+  }
+  #search {
+    left: 70%;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 550px) {
+  #search {
+    left: 50%;
+    top: 135px;
+    width: 200px;
+    margin-left: -100px;
+    height: 40px;
+  }
+}
 .search {
   margin-bottom: 150px;
 }
@@ -196,26 +237,24 @@
   background-color: white;
   margin: 20px 200px 0px 200px;
   border: 6px solid black;
-  border-radius: 20px ;
-  
+  border-radius: 20px;
 }
 .imgProfile {
- /* position: relative;
+  /* position: relative;
  top: 20px;
   height: 250px;
   border: 2px solid #00acee;
   border-radius: 25%/50%; */
   height: 250px;
   min-height: 100%;
-    min-width: 100%;
+  min-width: 100%;
 }
 .imgContent {
-
-  bottom: 0px;  
-  margin: 0 0 0 530px ;
+  bottom: 0px;
+  margin: 0 0 0 530px;
 }
 .info {
-margin: 10px 20px;
+  margin: 10px 20px;
 }
 
 #infoName {
@@ -223,3 +262,19 @@ margin: 10px 20px;
   font-weight: bold;
   margin-bottom: 0;
 }
+<<<<<<< HEAD
+=======
+.guide {
+  text-align: center;
+  font-weight: normal;
+}
+.home:hover {
+  background-color: #ac8c52;
+}
+.player-info:hover {
+  background-color: #ac8c52;
+}
+.hight-light:hover {
+  background-color: #ac8c52;
+}
+>>>>>>> fe36cf69c4a5961f009da1feb467bc637753b5ed

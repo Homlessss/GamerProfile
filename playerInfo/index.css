@@ -3,19 +3,16 @@
   font-weight: bold;
   margin-top: 5%;
 }
-#search {
+/* #search {
   display: flex;
   justify-content: center;
   align-content: center;
   position: relative;
   margin-top: 5%;
   margin-bottom: 10%;
-}
+} */
 
-.guide {
-  text-align: center;
-  font-weight: normal;
-}
+
   
 .nav-item a {
   color: #696969 !important;

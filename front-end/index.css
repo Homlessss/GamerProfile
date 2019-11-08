@@ -8,7 +8,6 @@
   background-image: url("https://lol.gamepedia.com/media/c/ce/Background_2019_light.jpg");
   background-attachment: fixed;
   background-size: cover;
-  min-height: 800px;
 }
 .navbar {
   width: 100%;
@@ -263,6 +262,8 @@
   font-weight: bold;
   margin-bottom: 0;
 }
+<<<<<<< HEAD
+=======
 .guide {
   text-align: center;
   font-weight: normal;
@@ -276,3 +277,4 @@
 .hight-light:hover {
   background-color: #ac8c52;
 }
+>>>>>>> fe36cf69c4a5961f009da1feb467bc637753b5ed

@@ -8,7 +8,7 @@ $(document).ready(function() {
     console.log("w");
     $.ajax({
       type: "POST",
-      url: `http://localhost:3000/api/auth/login`,
+      url: `https://gamer-profile.herokuapp.com/api/auth/login`,
       contentType: "application/json",
       data: JSON.stringify({
         email: $("#emailLog").val(),

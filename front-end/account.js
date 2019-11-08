@@ -29,6 +29,9 @@ $(document).ready(function() {
             if (data.role === "admin") {
               window.location.href = url2;
             }
+          },
+          error: function(err) {
+            console.log("e", err);
           }
         });
         createCookie(data);

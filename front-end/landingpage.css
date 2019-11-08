@@ -17,7 +17,7 @@
   background-repeat: no-repeat;
   backface-visibility: hidden;
   animation: slide 20s linear infinite 0s;
-  animation-timing-function: step-end;
+  animation-timing-function: ease-in;
   background-image: url("./img5.jpg");
   background-color: rgba(0, 0, 0, 0.5);
 }

@@ -22,7 +22,7 @@ $(document).ready(function() {
           ).val()}`,
           success: function(data) {
             console.log(data);
-            if (data.data[0].role == "user") {
+            if (data.role == "user") {
               window.location.href = url;
             } else {
               window.location.href = url2;

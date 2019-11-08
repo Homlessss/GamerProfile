@@ -20,7 +20,8 @@ $(document).ready(function() {
         // checkCookie();
         createCookie(data);
         console.log(data);
-        window.location.href = url2;
+        // if(data.data.)
+        // window.location.href = url2;
       },
       error: function(err) {
         console.log("e", err);

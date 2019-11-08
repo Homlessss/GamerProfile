@@ -16,8 +16,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     backface-visibility: hidden;
-    animation: slide 20s linear infinite 0s;
-    animation-timing-function: step-end;
+    animation: slide 20s linear infinite;
+    animation-timing-function: ease-in;
     background-image: url('./img5.jpg');
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -53,5 +53,8 @@
     }
     80%{
         background-image: url('/logo-image/img4.jpg');
+    }
+    100%{
+        background-image: url('/logo-image/img5.jpg');
     }
 }

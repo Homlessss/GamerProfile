@@ -335,3 +335,19 @@
 .hight-light:hover {
   background-color: #ac8c52;
 }
+#btn-login {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  border-radius: 5px;
+  position: absolute;
+  height: 35px;
+  width: 50px;
+  margin-left: 500px;
+  transition: 0.2s;
+}
+#btn-login:hover {
+  border: none;
+  background-color: #00acee;
+  color: white;
+}

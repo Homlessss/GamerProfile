@@ -116,6 +116,15 @@ $(document).ready(function() {
       document.elementFromPoint(0, 0).click();
     }
   });
+  $("#logout").click(function() {
+    try {
+      document.cookie = "token= ;expires= 01 Jan 1970 00:00:00 UTC";
+    } catch (error) {
+      // deal with errors
+      alert(error);
+    }
+    window.location.href = "https://gamer-profile.herokuapp.com/index.html";
+  });
 
   $("#editModal").on("show.bs.modal", function(event) {
     var button = $(event.relatedTarget); // Button that triggered the modal

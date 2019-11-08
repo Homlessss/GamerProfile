@@ -231,14 +231,19 @@
 .search {
   margin-bottom: 150px;
 }
+
+
+
 .content {
   height: 300px;
   display: flex;
   background-color: white;
-  margin: 20px 200px 0px 200px;
+  margin: 20px 15% 0px 15%;
   border: 6px solid black;
   border-radius: 20px;
+  transition: 0.5s;
 }
+
 .imgProfile {
   /* position: relative;
  top: 20px;
@@ -247,14 +252,20 @@
   border-radius: 25%/50%; */
   height: 250px;
   min-height: 100%;
-  min-width: 100%;
+  margin-right: 1%;
+  transition: 0.5s;
+
 }
 .imgContent {
   bottom: 0px;
-  margin: 0 0 0 530px;
+  margin: 0 0 0 40%;
+  transition: 0.5s;
+
 }
 .info {
-  margin: 10px 20px;
+  margin: 10px 10px 10px 20px;
+  transition: 0.5s;
+  width: 150px;
 }
 
 #infoName {
@@ -262,8 +273,39 @@
   font-weight: bold;
   margin-bottom: 0;
 }
-<<<<<<< HEAD
-=======
+
+@media only screen and (max-width: 1180px){
+  .imgContent {
+    margin: 0 0 0 20%;
+  }
+}
+
+@media only screen and (max-width: 940px){
+  .imgContent {
+    margin: 0 0 0 8%;
+  }
+  .content {
+    height: 300px;
+    margin: 20px 15% 0px 15%;
+  }
+}
+@media only screen and (max-width: 750px){
+  .imgProfile {
+    min-height: 40%;
+  }
+  .imgContent {
+    margin: 0 0 0 -150px;
+  }
+  .content {
+    height: 500px;
+    margin: 20px 15% 0px 15%;
+  }
+  .info {
+    margin: 300px 20px;
+  }
+}
+
+
 .guide {
   text-align: center;
   font-weight: normal;
@@ -277,4 +319,3 @@
 .hight-light:hover {
   background-color: #ac8c52;
 }
->>>>>>> fe36cf69c4a5961f009da1feb467bc637753b5ed

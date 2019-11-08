@@ -1,6 +1,6 @@
 const LOGIN_API_URL = "http://localhost:3000/api/auth/login";
 
-const url = "./admin.html";
+const url = "https://gamer-profile.herokuapp.com/index.html";
 const url2 = "https://gamer-profile.herokuapp.com/admin.html";
 $(document).ready(function() {
   $(".buttonLog").click(function(e) {
@@ -15,13 +15,23 @@ $(document).ready(function() {
         password: $("#passwordLog").val()
       }),
       success: function(data) {
-        // setCookie("token", data, 0.2);
-        // getCookie("token");
-        // checkCookie();
+        $.ajax({
+          type: "GET",
+          url: `https://gamer-profile.herokuapp.com/api/user?email=${$(
+            "#emailLog"
+          ).val()}`,
+          success: function(data) {
+            if (data.data.role == "user") {
+              window.location.href = url;
+            } else {
+              window.location.href = url2;
+            }
+          }
+        });
         createCookie(data);
         console.log(data);
+
         // if(data.data.)
-        window.location.href = url2;
       },
       error: function(err) {
         console.log("e", err);

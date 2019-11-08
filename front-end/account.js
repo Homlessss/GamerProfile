@@ -22,9 +22,10 @@ $(document).ready(function() {
           ).val()}`,
           success: function(data) {
             console.log(data);
-            if (data.role == "user") {
+            if (data.role === "user") {
               window.location.href = url;
-            } else {
+            }
+            if (data.role === "admin") {
               window.location.href = url2;
             }
           }

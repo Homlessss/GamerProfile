@@ -40,6 +40,7 @@ $(document).ready(function() {
       },
       error: function(err) {
         console.log("e", err);
+        alert(err.responseJSON.error);
       }
     });
   });

@@ -10,11 +10,7 @@ const teamRouter = require("./Server/api/module/teams/team.router");
 
 mongoose.connect(config.mongoConnectionString);
 
-<<<<<<< HEAD
-const port = process.env.PORT || 3000
-=======
 const port = process.env.PORT || 3000;
->>>>>>> fe36cf69c4a5961f009da1feb467bc637753b5ed
 
 const app = express();
 app.use(cors());

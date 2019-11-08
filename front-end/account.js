@@ -32,11 +32,11 @@ $(document).ready(function() {
           },
           error: function(err) {
             console.log("e", err);
+            alert(err.responseJSON.error);
           }
         });
         createCookie(data);
         console.log(data);
-
       },
       error: function(err) {
         console.log("e", err);
@@ -61,6 +61,7 @@ $(document).ready(function() {
       },
       error: function(err) {
         console.log("e", err);
+        alert(err.responseJSON.error);
       }
     });
   });
@@ -74,8 +75,6 @@ function createCookie(data) {
     alert(error);
   }
 }
-
-
 
 function getCookie(cname) {
   var name = cname + "=";

@@ -21,6 +21,7 @@ $(document).ready(function() {
             "#emailLog"
           ).val()}`,
           success: function(data) {
+            console.log(data);
             if (data.data.role == "user") {
               window.location.href = url;
             } else {

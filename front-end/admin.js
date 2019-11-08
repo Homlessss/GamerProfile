@@ -156,6 +156,7 @@ function deleteFunc(id) {
     },
     error: function(err) {
       console.log("e", err);
+      alert(err);
     }
   });
   document.elementFromPoint(0, 0).click();

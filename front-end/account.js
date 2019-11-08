@@ -21,7 +21,7 @@ $(document).ready(function() {
         createCookie(data);
         console.log(data);
         // if(data.data.)
-        // window.location.href = url2;
+        window.location.href = url2;
       },
       error: function(err) {
         console.log("e", err);

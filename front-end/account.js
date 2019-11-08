@@ -23,10 +23,10 @@ $(document).ready(function() {
           success: function(data) {
             console.log(data);
             console.log(data[0].role);
-            if (data.role === "user") {
+            if (data[0].role === "user") {
               window.location.href = url;
             }
-            if (data.role === "admin") {
+            if (data[0].role === "admin") {
               window.location.href = url2;
             }
           },

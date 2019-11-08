@@ -22,7 +22,7 @@ $(document).ready(function() {
           ).val()}`,
           success: function(data) {
             console.log(data);
-            console.log(data.role);
+            console.log(data[0].role);
             if (data.role === "user") {
               window.location.href = url;
             }

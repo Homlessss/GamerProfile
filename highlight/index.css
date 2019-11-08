@@ -133,20 +133,10 @@
 }
 .info {
   margin: 10px 20px;
-<<<<<<< HEAD
-  }
-  
-  #infoName {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
-=======
 }
-
+  
 #infoName {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 0;
 }
->>>>>>> fe36cf69c4a5961f009da1feb467bc637753b5ed

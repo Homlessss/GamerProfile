@@ -25,11 +25,9 @@ $(document).ready(function() {
             console.log(data[0].role);
             if (data[0].role === "user") {
               window.location.href = url;
-              $("#btn-login").hide();
             }
             if (data[0].role === "admin") {
               window.location.href = url2;
-              $("#btn-login").hide();
             }
           },
           error: function(err) {
@@ -39,7 +37,6 @@ $(document).ready(function() {
         createCookie(data);
         console.log(data);
 
-        // if(data.data.)
       },
       error: function(err) {
         console.log("e", err);
@@ -78,13 +75,7 @@ function createCookie(data) {
   }
 }
 
-function setCookie(cname, cvalue, exdays) {
-  var d = new Date();
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000);
-  var expires = "expires=" + d.toUTCString();
-  document.cookie = cname + "=" + cvalue + ";" + expires;
-  console.log(cname + " = " + cvalue + " ; " + expires);
-}
+
 
 function getCookie(cname) {
   var name = cname + "=";

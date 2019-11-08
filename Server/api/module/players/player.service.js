@@ -24,16 +24,17 @@ const create = async function(data) {
 };
 
 const update = async function(user, id, data) {
-  let auth = authService.authorization(user, ["admin"]);
+  // let auth = authService.authorization(user, ["admin"]);
   const existedData = await repository.findById(id);
-  if (auth) {
-    if (!existedData) {
-      throw new Error("Not found");
-    } else {
-      return await repository.update(id, data);
-    }
+  // if (auth) {
+
+  // } else {
+  //   throw new Error("Unauthorized!");
+  // }
+  if (!existedData) {
+    throw new Error("Not found");
   } else {
-    throw new Error("Unauthorized!");
+    return await repository.update(id, data);
   }
 };
 const deleteOne = async function(user, id) {
